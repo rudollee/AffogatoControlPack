@@ -84,6 +84,10 @@
       <Project>{2303F979-8565-40FC-BDA5-D095E782983E}</Project>
       <Name>AffogatoControlPack</Name>
     </ProjectReference>
+    <ProjectReference Include="..\AffogatoThemes\AffogatoThemes.csproj">
+      <Project>{fef116a4-ebe5-4297-9ce3-978f703895d4}</Project>
+      <Name>AffogatoThemes</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

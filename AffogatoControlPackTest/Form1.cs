@@ -1,4 +1,5 @@
 ﻿using AffogatoControlPack;
+using AffogatoThemes.Themes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,32 @@ namespace AffogatoControlPackTest
 
             listViewEx1.HeaderStyle = ColumnHeaderStyle.Clickable;
 
+            var codes = new List<CommonCode>
+            {
+                new CommonCode
+                {
+                    Code = "TST",
+                    CodeName = "Test"
+                },
+                new CommonCode
+                {
+                    Code = "ACT",
+                    CodeName = "Active"
+                }
+            };
+
+            new Affogato(this);
+
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.DataSource = codes;
+
+            
+        }
+
+        public class CommonCode
+        {
+            public string Code { get; set; }
+            public string CodeName { get; set; }
         }
     }
 }

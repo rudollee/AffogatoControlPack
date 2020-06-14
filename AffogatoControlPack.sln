@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffogatoControlPack", "Affo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffogatoControlPackTest", "AffogatoControlPackTest\AffogatoControlPackTest.csproj", "{CCABD378-10A3-47E4-AE9D-978B5E861201}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AffogatoThemes", "AffogatoThemes\AffogatoThemes.csproj", "{FEF116A4-EBE5-4297-9CE3-978F703895D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CCABD378-10A3-47E4-AE9D-978B5E861201}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCABD378-10A3-47E4-AE9D-978B5E861201}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCABD378-10A3-47E4-AE9D-978B5E861201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEF116A4-EBE5-4297-9CE3-978F703895D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEF116A4-EBE5-4297-9CE3-978F703895D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEF116A4-EBE5-4297-9CE3-978F703895D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEF116A4-EBE5-4297-9CE3-978F703895D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
