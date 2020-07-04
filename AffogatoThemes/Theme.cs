@@ -138,7 +138,7 @@ namespace AffogatoThemes
 		private void ApplyThemeToGridview() => ApplyThemeToGridview(GetControls<DataGridView>(Parent), Palette);
 		#endregion
 
-		#region ToolStrips
+		#region ToolStrips, StatusStrip & DropdownMenuItem
 		protected void ApplyThemeToToolStrips(IEnumerable<Control> toolStrips, Palette palette)
 		{
 			if (toolStrips is null || !toolStrips.Any()) return;
@@ -151,9 +151,7 @@ namespace AffogatoThemes
 		}
 
 		private void ApplyThemeToToolStrips() => ApplyThemeToToolStrips(this.GetControls<ToolStrip>(Parent), this.Palette);
-		#endregion
 
-		#region StatusStrip
 		protected void ApplyThemeToStatusStrips(IEnumerable<Control> strips, Palette palette)
 		{
 			if (strips is null || !strips.Any()) return;
@@ -210,6 +208,18 @@ namespace AffogatoThemes
 
 			ctrls.Add(parent);
 			return ctrls.Where(p => p.GetType() == typeof(T));
+		}
+
+		private IEnumerable<ToolStripMenuItem> GetMenuItems<T>(ToolStripMenuItem parent) where T : ToolStripMenuItem
+		{
+			var items = new List<ToolStripMenuItem>();
+			foreach (ToolStripMenuItem child in parent.DropDownItems)
+			{
+				items.AddRange(GetMenuItems<T>(child));
+			}
+
+			items.Add(parent);
+			return items.Where(p => p.GetType() == typeof(T));
 		}
 		#endregion
 	}
