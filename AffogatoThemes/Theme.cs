@@ -138,7 +138,7 @@ namespace AffogatoThemes
 		private void ApplyThemeToGridview() => ApplyThemeToGridview(GetControls<DataGridView>(Parent), Palette);
 		#endregion
 
-		#region
+		#region ToolStrips
 		protected void ApplyThemeToToolStrips(IEnumerable<Control> toolStrips, Palette palette)
 		{
 			if (toolStrips is null || !toolStrips.Any()) return;
@@ -152,6 +152,22 @@ namespace AffogatoThemes
 
 		private void ApplyThemeToToolStrips() => ApplyThemeToToolStrips(this.GetControls<ToolStrip>(Parent), this.Palette);
 		#endregion
+
+		#region StatusStrip
+		protected void ApplyThemeToStatusStrips(IEnumerable<Control> strips, Palette palette)
+		{
+			if (strips is null || !strips.Any()) return;
+
+			foreach (StatusStrip strip in strips)
+			{
+				strip.ForeColor = palette.FontBasic;
+				strip.BackColor = palette.Background;
+			}
+		}
+
+		private void ApplyThemeToStatusStrips() => ApplyThemeToStatusStrips(this.GetControls<StatusStrip>(Parent), this.Palette);
+		#endregion
+
 
 		#region Form
 		protected void ApplyThemeToForm(Form form, Palette palette)
@@ -179,6 +195,7 @@ namespace AffogatoThemes
 			ApplyThemeToListView();
 			ApplyThemeToGridview();
 			ApplyThemeToToolStrips();
+			ApplyThemeToStatusStrips();
 		}
 		#endregion
 
