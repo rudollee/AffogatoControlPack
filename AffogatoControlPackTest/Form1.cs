@@ -40,6 +40,7 @@ namespace AffogatoControlPackTest
             dataGridView1.DataSource = codes;
 
             
+            
         }
 
         public class CommonCode

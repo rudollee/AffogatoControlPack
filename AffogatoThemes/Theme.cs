@@ -160,10 +160,30 @@ namespace AffogatoThemes
 			{
 				strip.ForeColor = palette.FontBasic;
 				strip.BackColor = palette.Background;
+				strip.Renderer = new ToolStripMenuItemRenderer(palette.Background, palette.BackgroundAlt);
+
+				foreach (ToolStripItem item in strip.Items)
+				{
+					if (item.GetType() != typeof(ToolStripSplitButton)) continue;
+
+					var menuitems = GetMenuItems(item);
+					ApplyThemeToMenuItems(menuitems, palette);
+				}
 			}
 		}
 
 		private void ApplyThemeToStatusStrips() => ApplyThemeToStatusStrips(this.GetControls<StatusStrip>(Parent), this.Palette);
+
+		private void ApplyThemeToMenuItems(IEnumerable<ToolStripMenuItem> items, Palette palette)
+		{
+			if (items is null || !items.Any()) return;
+
+			foreach (ToolStripMenuItem item in items)
+			{
+				item.ForeColor = palette.FontBasic;
+				item.BackColor = palette.Background;
+			}
+		}
 		#endregion
 
 
@@ -210,16 +230,33 @@ namespace AffogatoThemes
 			return ctrls.Where(p => p.GetType() == typeof(T));
 		}
 
-		private IEnumerable<ToolStripMenuItem> GetMenuItems<T>(ToolStripMenuItem parent) where T : ToolStripMenuItem
+		private List<ToolStripMenuItem> GetMenuItems(ToolStripItem parent)
 		{
-			var items = new List<ToolStripMenuItem>();
-			foreach (ToolStripMenuItem child in parent.DropDownItems)
+			if (parent.GetType() != typeof(ToolStripMenuItem) && parent.GetType() != typeof(ToolStripSplitButton)) return null;
+
+			var menuitems = new List<ToolStripMenuItem>();
+			if (parent.GetType() == typeof(ToolStripMenuItem))
 			{
-				items.AddRange(GetMenuItems<T>(child));
+				var menu = parent as ToolStripMenuItem;
+
+				foreach (ToolStripMenuItem item in menu.DropDownItems)
+				{
+					menuitems.AddRange(GetMenuItems(item));
+				}
+
+				menuitems.Add(menu);
+			}
+			else if (parent.GetType() == typeof(ToolStripSplitButton))
+			{
+				var menu = parent as ToolStripSplitButton;
+
+				foreach (ToolStripItem item in menu.DropDownItems)
+				{
+					menuitems.AddRange(GetMenuItems(item));
+				}
 			}
 
-			items.Add(parent);
-			return items.Where(p => p.GetType() == typeof(T));
+			return menuitems;
 		}
 		#endregion
 	}

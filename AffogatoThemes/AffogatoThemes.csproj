@@ -49,6 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Themes\Affogato.cs" />
     <Compile Include="Themes\BlackPink.cs" />
+    <Compile Include="ToolStripMenuItemRenderer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
