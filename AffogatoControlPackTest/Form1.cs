@@ -34,7 +34,11 @@ namespace AffogatoControlPackTest
                 }
             };
 
-            new Affogato(this);
+            new BlackPink(this);
+
+            statusStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
+            toolStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
+            menuStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
 
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = codes;

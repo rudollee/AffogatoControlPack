@@ -41,15 +41,23 @@
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
 			this.exampleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.example2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.listViewEx1 = new AffogatoControlPack.ListViewEx();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.comboBoxEx1 = new AffogatoControlPack.ComboBoxEx();
-			this.example2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.testMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.helloWorldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.hiThereToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.statusStrip1.SuspendLayout();
+			this.menuStrip1.SuspendLayout();
+			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
@@ -59,9 +67,9 @@
             this.Code,
             this.CodeName});
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Right;
-			this.dataGridView1.Location = new System.Drawing.Point(415, 0);
+			this.dataGridView1.Location = new System.Drawing.Point(415, 24);
 			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.Size = new System.Drawing.Size(385, 428);
+			this.dataGridView1.Size = new System.Drawing.Size(385, 404);
 			this.dataGridView1.TabIndex = 2;
 			// 
 			// Code
@@ -108,9 +116,15 @@
 			// 
 			this.exampleToolStripMenuItem.BackColor = System.Drawing.Color.Maroon;
 			this.exampleToolStripMenuItem.Name = "exampleToolStripMenuItem";
-			this.exampleToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-			this.exampleToolStripMenuItem.Size = new System.Drawing.Size(180, 20);
+			this.exampleToolStripMenuItem.Padding = new System.Windows.Forms.Padding(0);
+			this.exampleToolStripMenuItem.Size = new System.Drawing.Size(128, 20);
 			this.exampleToolStripMenuItem.Text = "Example";
+			// 
+			// example2ToolStripMenuItem
+			// 
+			this.example2ToolStripMenuItem.Name = "example2ToolStripMenuItem";
+			this.example2ToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
+			this.example2ToolStripMenuItem.Text = "Example 2";
 			// 
 			// toolStripStatusLabel1
 			// 
@@ -158,27 +172,78 @@
 			this.comboBoxEx1.Size = new System.Drawing.Size(121, 21);
 			this.comboBoxEx1.TabIndex = 0;
 			// 
-			// example2ToolStripMenuItem
+			// menuStrip1
 			// 
-			this.example2ToolStripMenuItem.Name = "example2ToolStripMenuItem";
-			this.example2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.example2ToolStripMenuItem.Text = "Example 2";
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.testMenuToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+			this.menuStrip1.TabIndex = 4;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// toolStrip1
+			// 
+			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+			this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Size = new System.Drawing.Size(415, 25);
+			this.toolStrip1.TabIndex = 5;
+			this.toolStrip1.Text = "toolStrip1";
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton1.Text = "toolStripButton1";
+			// 
+			// testMenuToolStripMenuItem
+			// 
+			this.testMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.helloWorldToolStripMenuItem,
+            this.hiThereToolStripMenuItem});
+			this.testMenuToolStripMenuItem.Name = "testMenuToolStripMenuItem";
+			this.testMenuToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+			this.testMenuToolStripMenuItem.Text = "TestMenu";
+			// 
+			// helloWorldToolStripMenuItem
+			// 
+			this.helloWorldToolStripMenuItem.Name = "helloWorldToolStripMenuItem";
+			this.helloWorldToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.helloWorldToolStripMenuItem.Text = "Hello World";
+			// 
+			// hiThereToolStripMenuItem
+			// 
+			this.hiThereToolStripMenuItem.Name = "hiThereToolStripMenuItem";
+			this.hiThereToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.hiThereToolStripMenuItem.Text = "Hi, There";
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
+			this.Controls.Add(this.toolStrip1);
 			this.Controls.Add(this.dataGridView1);
 			this.Controls.Add(this.statusStrip1);
+			this.Controls.Add(this.menuStrip1);
 			this.Controls.Add(this.listViewEx1);
 			this.Controls.Add(this.comboBoxEx1);
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Form1";
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -199,6 +264,12 @@
 		private System.Windows.Forms.ToolStripMenuItem exampleToolStripMenuItem;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 		private System.Windows.Forms.ToolStripMenuItem example2ToolStripMenuItem;
+		private System.Windows.Forms.MenuStrip menuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem testMenuToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem helloWorldToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem hiThereToolStripMenuItem;
+		private System.Windows.Forms.ToolStrip toolStrip1;
+		private System.Windows.Forms.ToolStripButton toolStripButton1;
 	}
 }
 
