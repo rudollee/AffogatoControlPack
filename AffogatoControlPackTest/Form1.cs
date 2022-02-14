@@ -1,4 +1,5 @@
 ﻿using AffogatoControlPack;
+using AffogatoThemes;
 using AffogatoThemes.Themes;
 using System;
 using System.Collections.Generic;
@@ -36,7 +37,7 @@ namespace AffogatoControlPackTest
 
             new BlackPink(this);
 
-            statusStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
+            statusStrip1.Renderer = new ToolStripMenuItemRenderer(new AffogatoThemes.Models.AffogatoColorTable());
             toolStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
             menuStrip1.Renderer = new ToolStripProfessionalRenderer(new AffogatoThemes.Models.AffogatoColorTable());
 

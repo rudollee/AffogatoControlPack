@@ -7,10 +7,17 @@ namespace AffogatoThemes
 	{
 		private Color Background;
 		private Color BackgroundSelected;
+		private ProfessionalColorTable _professionalColorTable;
 		public ToolStripMenuItemRenderer(Color background, Color backgroundSelected)
 		{
+			base.ColorTable.UseSystemColors = false;
 			this.Background = background;
 			this.BackgroundSelected = backgroundSelected;
+		}
+
+		public ToolStripMenuItemRenderer(ProfessionalColorTable colorTable )
+		{
+			_professionalColorTable = colorTable;
 		}
 
 		protected override void OnRenderToolStripBorder(ToolStripRenderEventArgs e)
@@ -43,6 +50,11 @@ namespace AffogatoThemes
 
 	public class MyColorTable : ProfessionalColorTable
 	{
+		public MyColorTable()
+		{
+			base.UseSystemColors = false;
+		}
+
 		public override Color MenuItemBorder { get { return Color.Transparent; } }
 		public Color MenuItemEnabledBorder { get { return base.MenuItemBorder; } }
 	}
