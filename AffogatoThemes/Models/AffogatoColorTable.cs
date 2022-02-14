@@ -18,7 +18,7 @@ namespace AffogatoThemes.Models
 
         public override Color ToolStripBorder
         {
-            get { return Color.Red; }
+            get { return Color.BlueViolet; }
         }
 
 

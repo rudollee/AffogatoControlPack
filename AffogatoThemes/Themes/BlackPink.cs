@@ -32,4 +32,47 @@ namespace AffogatoThemes.Themes
 
         }
     }
+
+	public class BlackPinkAdv : ProfessionalColorTable
+    {
+        public BlackPinkAdv()
+        {
+            base.UseSystemColors = false;
+        }
+
+        public override Color ToolStripBorder
+        {
+            get { return Color.Transparent; }
+        }
+
+        public override Color MenuBorder
+        {
+            get { return Color.Transparent; }
+        }
+        public override Color MenuItemBorder
+        {
+            get { return Color.Transparent; }
+        }
+        public override Color MenuItemSelected
+        {
+            get { return Color.Transparent; }
+        }
+        public override Color MenuItemSelectedGradientBegin
+        {
+            get { return Color.LawnGreen; }
+        }
+        public override Color MenuItemSelectedGradientEnd
+        {
+            get { return Color.MediumSeaGreen; }
+        }
+        public override Color MenuStripGradientBegin
+        {
+            get { return Color.AliceBlue; }
+        }
+        public override Color MenuStripGradientEnd
+        {
+            get { return Color.Red; }
+        }
+
+    }
 }
